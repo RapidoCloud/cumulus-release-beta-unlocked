@@ -19,3 +19,4 @@ runs:
         cumulusci-version: "${{ inputs.cumulusci-version }}"
         sfdx-version: "${{ inputs.sfdx-version }}"
         flow-name: release_unlocked_beta
+        org-name: "beta"
