@@ -10,6 +10,9 @@ inputs:
   dev-hub-auth-url:
     description: "SFDX auth URL for the Dev Hub"
     required: true
+  org-name:
+    description: "Org name (see why here https://cumulusci.readthedocs.io/en/stable/unlocked-package.html)"
+    required: true
 runs:
   using: "composite"
   steps:
@@ -19,4 +22,4 @@ runs:
         cumulusci-version: "${{ inputs.cumulusci-version }}"
         sfdx-version: "${{ inputs.sfdx-version }}"
         flow-name: release_unlocked_beta
-        org-name: "beta"
+        org-name: "${{ inputs.org-name }}"
